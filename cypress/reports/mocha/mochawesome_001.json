@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-16T00:37:52.023Z",
+    "end": "2020-10-16T00:37:59.670Z",
+    "duration": 7647,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1b729088-9536-4860-8317-fd4a8300b75b",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo\\testApiSuite.spec.js",
+      "file": "cypress\\integration\\demo\\testApiSuite.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8c8133c0-d506-4325-bfc6-f481d5dd955e",
+          "title": "Test API Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login test application",
+              "fullTitle": "Test API Suite Login test application",
+              "timedOut": null,
+              "duration": 2645,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://angular.realworld.io/');\ncy.contains(' Sign in ').click();\ncy.get('[formcontrolname=\"email\"]').click().type('sedabilge1988@gmail.com');\ncy.get('[formcontrolname=\"password\"]').click().type('kaymak1988');\ncy.get('[type=\"submit\"]').click();\ncy.title().should('eq', 'Conduit');",
+              "err": {},
+              "uuid": "3efe3d03-5383-41de-abea-1619fd964b48",
+              "parentUUID": "8c8133c0-d506-4325-bfc6-f481d5dd955e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify request & response",
+              "fullTitle": "Test API Suite Verify request & response",
+              "timedOut": null,
+              "duration": 1949,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('New Article').click();\ncy.get('[formcontrolname=\"title\"]').click().type('title');\ncy.get('[formcontrolname=\"description\"]').click().type('description');\ncy.get('[formcontrolname=\"body\"]').click().type('This is a very nice article');\ncy.contains('Publish Article').click();",
+              "err": {},
+              "uuid": "abf2b60e-dcc3-4839-80e8-3d5e58da0a21",
+              "parentUUID": "8c8133c0-d506-4325-bfc6-f481d5dd955e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3efe3d03-5383-41de-abea-1619fd964b48",
+            "abf2b60e-dcc3-4839-80e8-3d5e58da0a21"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4594,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

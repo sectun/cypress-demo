@@ -1,4 +1,3 @@
-
 function selectDayFromCurrent(day){
     let date = new Date()
     date.setDate(date.getDate() + day)

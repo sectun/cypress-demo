@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-16T00:37:34.092Z",
+    "end": "2020-10-16T00:37:48.256Z",
+    "duration": 14164,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6d1e44b3-c363-4be3-8ed7-1b4eb6aada75",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo\\introductionSuite.spec.js",
+      "file": "cypress\\integration\\demo\\introductionSuite.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+          "title": "Our demo test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Locator selection demonstration",
+              "fullTitle": "Our demo test suite Locator selection demonstration",
+              "timedOut": null,
+              "duration": 4660,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('Forms').click();\ncy.contains('Form Layouts').click(); //by Tag Name\ncy.get('input'); //by ID\ncy.get('#inputEmail1'); //by Class name\ncy.get('.input-full-width'); //by Attribute name\ncy.get('[placeholder]'); //by Attribute name and value\ncy.get('[placeholder=\"Email\"]'); //by Class value\ncy.get('[class=\"input-full-width size-medium shape-rectangle\"]'); //by Tag name and Attribute with value\ncy.get('input[placeholder=\"Email\"]'); //by two different attributes\ncy.get('[placeholder=\"Email\"][type=\"email\"]'); //by tag name, Attribute with value, ID and Class name\ncy.get('input[placeholder=\"Email\"]#inputEmail1.input-full-width'); //The most recommended way by Cypress\ncy.get('[data-cy=\"imputEmail1\"]');",
+              "err": {},
+              "uuid": "9fd675cf-72d3-4137-b170-576331033966",
+              "parentUUID": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Custom Locator Selection",
+              "fullTitle": "Our demo test suite Custom Locator Selection",
+              "timedOut": null,
+              "duration": 2558,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('Forms').click();\ncy.contains('Form Layouts').click();\ncy.get('[data-cy=\"signInButton\"]');\ncy.contains('Sign in');\ncy.contains('[status=\"warning\"]', 'Sign in');\ncy.get('#inputEmail3').parents('form').find('button').should('contain', 'Sign in').parents('form').find('nb-checkbox').click();\ncy.contains('nb-card', 'Horizontal form').find('[type=\"email\"]');",
+              "err": {},
+              "uuid": "2873b1eb-f6b8-4c84-b20c-ab3c1d2750d1",
+              "parentUUID": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify email-password fields",
+              "fullTitle": "Our demo test suite Verify email-password fields",
+              "timedOut": null,
+              "duration": 1881,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('Forms').click();\ncy.contains('Form Layouts').click(); // cy.contains('nb-card', 'Using the Grid').find('[for=\"inputEmail1\"]').should('contain', 'Email')\n// cy.contains('nb-card', 'Using the Grid').find('[for=\"inputPassword2\"]').should('contain', 'Password')\n// cy.contains('nb-card', 'Basic form').find('[for=\"exampleInputEmail1\"]').should('contain', 'Email address')\n// cy.contains('nb-card', 'Basic form').find('[for=\"exampleInputPassword1\"]').should('contain', 'Password')\n//selenium\n// const fistForm = cy.contains('nb-card', 'Using the Grid')\n// const secondForm = cy.contains('nb-card', 'Basic form')\n// fistForm.find('[for=\"inputEmail1\"]').should('contain', 'Email')\n// fistForm.find('[for=\"inputPassword2\"]').should('contain', 'Password')\n// secondForm.find('[for=\"exampleInputEmail1\"]').should('contain', 'Email address')\n//cypress style\ncy.contains('nb-card', 'Using the Grid').then(function (firstForm) {\n  var emailLabelFirst = firstForm.find('[for=\"inputEmail1\"]').text();\n  var passwordLabelFirst = firstForm.find('[for=\"inputPassword2\"]').text();\n  expect(emailLabelFirst).to.equal('Email');\n  expect(passwordLabelFirst).to.equal('Password');\n  cy.contains('nb-card', 'Basic form').then(function (secondForm) {\n    var passwordSecondText = secondForm.find('[for=\"exampleInputPassword1\"]').text();\n    expect(passwordLabelFirst).to.equal(passwordSecondText);\n    cy.wrap(secondForm).find('[for=\"exampleInputPassword1\"]').should('contain', 'Password');\n  });\n});",
+              "err": {},
+              "uuid": "90099b9c-5a63-4f34-a1b2-f2447c694deb",
+              "parentUUID": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "tooltip",
+              "fullTitle": "Our demo test suite tooltip",
+              "timedOut": null,
+              "duration": 4823,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('Modal & Overlays').click();\ncy.contains('Tooltip').click();\ncy.contains('nb-card', 'Colored Tooltips').contains('Default').click();\ncy.get('nb-tooltip').should('contain', 'This is a tooltip');",
+              "err": {},
+              "uuid": "03daea9d-206a-428f-96f6-50a504eb6c7f",
+              "parentUUID": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9fd675cf-72d3-4137-b170-576331033966",
+            "2873b1eb-f6b8-4c84-b20c-ab3c1d2750d1",
+            "90099b9c-5a63-4f34-a1b2-f2447c694deb",
+            "03daea9d-206a-428f-96f6-50a504eb6c7f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13922,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

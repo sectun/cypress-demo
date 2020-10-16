@@ -1,7 +1,7 @@
-import { navigateTo } from "../support/page_objects/navigationPage"
-import { onFormLayoutsPage } from "../support/page_objects/formLayoutsPage"
-import { onDatePickerPage } from "../support/page_objects/datepickerPage"
-import { onSmartTablePage } from "../support/page_objects/smartTablePage"
+import { navigateTo } from "../../support/page_objects/navigationPage"
+import { onFormLayoutsPage } from "../../support/page_objects/formLayoutsPage"
+import { onDatePickerPage } from "../../support/page_objects/datepickerPage"
+import { onSmartTablePage } from "../../support/page_objects/smartTablePage"
 
 const runOn = (browser, fn) => {
     if (Cypress.isBrowser(browser)) {
@@ -38,11 +38,11 @@ ignoreOn('firefox', () => {
         onFormLayoutsPage.submitBasicFormWithEmailAndPassword('test@test.com', 'password')
         navigateTo.datepickerPage()
         onDatePickerPage.selectCommonDatepickerDateFromToday(1)
-        onDatePickerPage.selectDatepickerWithRangeFromToday(7, 14)
-        navigateTo.smartTablePage()
-        onSmartTablePage.addNewRecordWithFirstAndLastName('Artem', 'Bondar')
-        onSmartTablePage.updateAgeByFirstName('Artem', '35')
-        onSmartTablePage.deleteRowByIndex(1)
+        // onDatePickerPage.selectDatepickerWithRangeFromToday(7, 14)
+        // navigateTo.smartTablePage()
+        // onSmartTablePage.addNewRecordWithFirstAndLastName('Artem', 'Bondar')
+        // onSmartTablePage.updateAgeByFirstName('Artem', '35')
+        // onSmartTablePage.deleteRowByIndex(1)
     })
 
 

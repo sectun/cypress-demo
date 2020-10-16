@@ -1,13 +1,12 @@
 {
   "baseUrl": "http://localhost:4200/",
-  "ignoreTestFiles": ["**/examples/*",
-                      "**/__snapshots__/*",
-                      "**/__image_snapshots__/*"
-                    ],
-  "viewportHeight": 1080,
+  "ignoreTestFiles": ["**/examples/*"],
+  "viewportHeight": 1300,
   "viewportWidth": 1920,
   "video": false,
   "defaultCommandTimeout": 10000,
+  "chromeWebSecurity": false,
+
   "projectId": "soeotu",
   "env": {
     "cypress-plugin-snapshots": {
@@ -15,5 +14,20 @@
         "threshold": 0.01
       }
     }
-  }
+  },
+
+  "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "html": false,
+            "json": true
+        }
+    }
+
+    
+
 }

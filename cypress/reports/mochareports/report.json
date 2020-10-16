@@ -1,0 +1,318 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-16T00:37:34.092Z",
+    "end": "2020-10-16T00:38:17.663Z",
+    "duration": 33504,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1b729088-9536-4860-8317-fd4a8300b75b",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo\\testApiSuite.spec.js",
+      "file": "cypress\\integration\\demo\\testApiSuite.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8c8133c0-d506-4325-bfc6-f481d5dd955e",
+          "title": "Test API Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login test application",
+              "fullTitle": "Test API Suite Login test application",
+              "timedOut": null,
+              "duration": 2645,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://angular.realworld.io/');\ncy.contains(' Sign in ').click();\ncy.get('[formcontrolname=\"email\"]').click().type('sedabilge1988@gmail.com');\ncy.get('[formcontrolname=\"password\"]').click().type('kaymak1988');\ncy.get('[type=\"submit\"]').click();\ncy.title().should('eq', 'Conduit');",
+              "err": {},
+              "uuid": "3efe3d03-5383-41de-abea-1619fd964b48",
+              "parentUUID": "8c8133c0-d506-4325-bfc6-f481d5dd955e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify request & response",
+              "fullTitle": "Test API Suite Verify request & response",
+              "timedOut": null,
+              "duration": 1949,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('New Article').click();\ncy.get('[formcontrolname=\"title\"]').click().type('title');\ncy.get('[formcontrolname=\"description\"]').click().type('description');\ncy.get('[formcontrolname=\"body\"]').click().type('This is a very nice article');\ncy.contains('Publish Article').click();",
+              "err": {},
+              "uuid": "abf2b60e-dcc3-4839-80e8-3d5e58da0a21",
+              "parentUUID": "8c8133c0-d506-4325-bfc6-f481d5dd955e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3efe3d03-5383-41de-abea-1619fd964b48",
+            "abf2b60e-dcc3-4839-80e8-3d5e58da0a21"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4594,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "84ed86d6-ea40-4aca-a401-e68e6ac59efe",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo\\testWithPageObjects.spec.js",
+      "file": "cypress\\integration\\demo\\testWithPageObjects.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ae2129b0-7584-4618-8755-b1be1927babc",
+          "title": "Test with Page Objects",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify navigations actoss the pages",
+              "fullTitle": "Test with Page Objects verify navigations actoss the pages",
+              "timedOut": null,
+              "duration": 6994,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_navigationPage.navigateTo.formLayoutsPage();\n_navigationPage.navigateTo.datepickerPage();\n_navigationPage.navigateTo.smartTablePage();\n_navigationPage.navigateTo.tooltipPage();\n_navigationPage.navigateTo.toasterPage();",
+              "err": {},
+              "uuid": "ab7ef0e0-301c-4de2-8a08-278de9c6eb93",
+              "parentUUID": "ae2129b0-7584-4618-8755-b1be1927babc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": " should submit Inline and Basic form and select tomorrow date in the calendar",
+              "fullTitle": "Test with Page Objects  should submit Inline and Basic form and select tomorrow date in the calendar",
+              "timedOut": null,
+              "duration": 7994,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_navigationPage.navigateTo.formLayoutsPage();\n_formLayoutsPage.onFormLayoutsPage.submitInlineFormWithNameAndEmail('Artem', 'test@test.com');\n_formLayoutsPage.onFormLayoutsPage.submitBasicFormWithEmailAndPassword('test@test.com', 'password');\n_navigationPage.navigateTo.datepickerPage();\n_datepickerPage.onDatePickerPage.selectCommonDatepickerDateFromToday(1); // onDatePickerPage.selectDatepickerWithRangeFromToday(7, 14)\n// navigateTo.smartTablePage()\n// onSmartTablePage.addNewRecordWithFirstAndLastName('Artem', 'Bondar')\n// onSmartTablePage.updateAgeByFirstName('Artem', '35')\n// onSmartTablePage.deleteRowByIndex(1)",
+              "err": {},
+              "uuid": "b01d6fc3-9dff-49ae-8a13-e6c3a29e25ef",
+              "parentUUID": "ae2129b0-7584-4618-8755-b1be1927babc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ab7ef0e0-301c-4de2-8a08-278de9c6eb93",
+            "b01d6fc3-9dff-49ae-8a13-e6c3a29e25ef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14988,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6d1e44b3-c363-4be3-8ed7-1b4eb6aada75",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo\\introductionSuite.spec.js",
+      "file": "cypress\\integration\\demo\\introductionSuite.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+          "title": "Our demo test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Locator selection demonstration",
+              "fullTitle": "Our demo test suite Locator selection demonstration",
+              "timedOut": null,
+              "duration": 4660,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('Forms').click();\ncy.contains('Form Layouts').click(); //by Tag Name\ncy.get('input'); //by ID\ncy.get('#inputEmail1'); //by Class name\ncy.get('.input-full-width'); //by Attribute name\ncy.get('[placeholder]'); //by Attribute name and value\ncy.get('[placeholder=\"Email\"]'); //by Class value\ncy.get('[class=\"input-full-width size-medium shape-rectangle\"]'); //by Tag name and Attribute with value\ncy.get('input[placeholder=\"Email\"]'); //by two different attributes\ncy.get('[placeholder=\"Email\"][type=\"email\"]'); //by tag name, Attribute with value, ID and Class name\ncy.get('input[placeholder=\"Email\"]#inputEmail1.input-full-width'); //The most recommended way by Cypress\ncy.get('[data-cy=\"imputEmail1\"]');",
+              "err": {},
+              "uuid": "9fd675cf-72d3-4137-b170-576331033966",
+              "parentUUID": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Custom Locator Selection",
+              "fullTitle": "Our demo test suite Custom Locator Selection",
+              "timedOut": null,
+              "duration": 2558,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('Forms').click();\ncy.contains('Form Layouts').click();\ncy.get('[data-cy=\"signInButton\"]');\ncy.contains('Sign in');\ncy.contains('[status=\"warning\"]', 'Sign in');\ncy.get('#inputEmail3').parents('form').find('button').should('contain', 'Sign in').parents('form').find('nb-checkbox').click();\ncy.contains('nb-card', 'Horizontal form').find('[type=\"email\"]');",
+              "err": {},
+              "uuid": "2873b1eb-f6b8-4c84-b20c-ab3c1d2750d1",
+              "parentUUID": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify email-password fields",
+              "fullTitle": "Our demo test suite Verify email-password fields",
+              "timedOut": null,
+              "duration": 1881,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('Forms').click();\ncy.contains('Form Layouts').click(); // cy.contains('nb-card', 'Using the Grid').find('[for=\"inputEmail1\"]').should('contain', 'Email')\n// cy.contains('nb-card', 'Using the Grid').find('[for=\"inputPassword2\"]').should('contain', 'Password')\n// cy.contains('nb-card', 'Basic form').find('[for=\"exampleInputEmail1\"]').should('contain', 'Email address')\n// cy.contains('nb-card', 'Basic form').find('[for=\"exampleInputPassword1\"]').should('contain', 'Password')\n//selenium\n// const fistForm = cy.contains('nb-card', 'Using the Grid')\n// const secondForm = cy.contains('nb-card', 'Basic form')\n// fistForm.find('[for=\"inputEmail1\"]').should('contain', 'Email')\n// fistForm.find('[for=\"inputPassword2\"]').should('contain', 'Password')\n// secondForm.find('[for=\"exampleInputEmail1\"]').should('contain', 'Email address')\n//cypress style\ncy.contains('nb-card', 'Using the Grid').then(function (firstForm) {\n  var emailLabelFirst = firstForm.find('[for=\"inputEmail1\"]').text();\n  var passwordLabelFirst = firstForm.find('[for=\"inputPassword2\"]').text();\n  expect(emailLabelFirst).to.equal('Email');\n  expect(passwordLabelFirst).to.equal('Password');\n  cy.contains('nb-card', 'Basic form').then(function (secondForm) {\n    var passwordSecondText = secondForm.find('[for=\"exampleInputPassword1\"]').text();\n    expect(passwordLabelFirst).to.equal(passwordSecondText);\n    cy.wrap(secondForm).find('[for=\"exampleInputPassword1\"]').should('contain', 'Password');\n  });\n});",
+              "err": {},
+              "uuid": "90099b9c-5a63-4f34-a1b2-f2447c694deb",
+              "parentUUID": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "tooltip",
+              "fullTitle": "Our demo test suite tooltip",
+              "timedOut": null,
+              "duration": 4823,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('Modal & Overlays').click();\ncy.contains('Tooltip').click();\ncy.contains('nb-card', 'Colored Tooltips').contains('Default').click();\ncy.get('nb-tooltip').should('contain', 'This is a tooltip');",
+              "err": {},
+              "uuid": "03daea9d-206a-428f-96f6-50a504eb6c7f",
+              "parentUUID": "c5ea0b24-b1ea-4bbd-8039-a7031433cb16",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9fd675cf-72d3-4137-b170-576331033966",
+            "2873b1eb-f6b8-4c84-b20c-ab3c1d2750d1",
+            "90099b9c-5a63-4f34-a1b2-f2447c694deb",
+            "03daea9d-206a-428f-96f6-50a504eb6c7f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13922,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
